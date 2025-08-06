@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 200px;
+        }
+    </style>
+</head>
+<body style=" background-color: darkcyan; ">
+        <div style="display: flex; justify-content: center; align-items: center; height: 400px;"><img id="outcome" src="1.jpg" alt=""></div>
+        <div style="justify-content: center; display: flex; height: 100px; align-items: center;">
+            <img src="1.jpg" hidden >
+            <img src="2.jpg" hidden >
+            <img src="3.jpg" hidden >
+            <img src="4.jpg" hidden >
+            <img src="5.jpg" hidden >
+            <img src="6.jpg" hidden >
+            <button id="roll" onclick="Roll()" style="width: 400px; height: 60px; background-color: red; font-weight: bold;">Roll Dice</button>
+        </div>
+</body>
+<script>
+    
+let allDice = ['1.jpg',  '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'];
+let outcome = document.querySelector('#outcome');
+
+function Roll(){
+    let draw = Math.floor(Math.random() * allDice.length);
+    outcome.src = allDice[draw];
+}
+    
+   
+
+</script>
+</html>
