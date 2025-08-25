@@ -9,13 +9,13 @@ function Roll(){
     
     img.forEach(img =>{
     let roll = Math.floor(Math.random() * allDice.length);
-    img.src = allDice[roll];                    //DISPLAYING ROLLED DICE
+    img.src = allDice[roll];                   
     total += (roll +1);
 
-    dice.push(roll +1);   //SAVING ROLLED DICE INSIDE AN ARRAY
+    dice.push(roll +1);   
 
     let rolledDice = document.createElement('img');
-    rolledDice.src = allDice[roll];                  //SAVING IMG OF DICE RESPECTIVELY
+    rolledDice.src = allDice[roll];                  
     rolledDice.style.height = '35px';
 
     imgHolder.append(rolledDice);  
@@ -26,10 +26,11 @@ function Roll(){
     li.style.fontSize = '47px';
 
     li.innerHTML = `You rolled: `;
-    li.append(imgHolder);   //DISPLAYING ROLLED DICE 
+    li.append(imgHolder);   
     li.innerHTML += ` </b>${dice.join(' ')}</b> respectively. You scored <b>${total}</b> total!`;
     document.querySelector('ul').append(li);
-    li.scrollIntoView({block: "end"}); //PRETTY SELF EXPLANATORY
+    li.scrollIntoView({block: "end"}); 
     
 }
+
 
