@@ -9,7 +9,7 @@ function Roll(){
     
     img.forEach(img =>{
     let roll = Math.floor(Math.random() * allDice.length);
-    img.src = allDice[roll];                    //ROLLING DICE
+    img.src = allDice[roll];                    //DISPLAYING ROLLED DICE
     total += (roll +1);
 
     dice.push(roll +1);   //SAVING ROLLED DICE INSIDE AN ARRAY
@@ -32,3 +32,4 @@ function Roll(){
     li.scrollIntoView({block: "end"}); //PRETTY SELF EXPLANATORY
     
 }
+
